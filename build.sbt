@@ -30,6 +30,8 @@ libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0"
 // Now, in any Scala file, you can import classes, objects, etc., from cats with
 // a regular import.
 
+libraryDependencies += "org.mongodb.scala" %% "mongo-scala-driver" % "2.9.0"
+
 // TIP: To find the "dependency" that you need to add to the
 // `libraryDependencies` set, which in the above example looks like this:
 
