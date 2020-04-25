@@ -21,7 +21,7 @@ object LocationService {
       "Jakarta",
       "Bandung",
       "Semarang",
-      "Yogyakarta Region",
+      "Yogyakarta",
       "Surabaya",
       "Serang",
       "Denpasar",
@@ -48,7 +48,7 @@ object LocationService {
     var locations = Seq[Document]()
 
     cities.foreach{city =>
-      val location:Document = collection.find(equal("name",city)).headResult()
+      val location:Document = collection.find(equal("name", city)).headResult()
       locations = locations :+ location
     }
 

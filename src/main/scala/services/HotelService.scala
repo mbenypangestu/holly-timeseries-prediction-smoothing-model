@@ -20,6 +20,6 @@ object HotelService {
   def findByLocationId(location_id: ObjectId): Seq[Document] ={
     val collection:MongoCollection[Document] = db.getCollection("hotel")
 
-    collection.find(equal("location.$id",location_id)).results()
+    collection.find(equal("location._id", location_id)).results()
   }
 }
