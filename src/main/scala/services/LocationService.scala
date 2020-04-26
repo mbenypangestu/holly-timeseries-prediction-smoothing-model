@@ -9,9 +9,9 @@ import helper.Helpers._
 object LocationService {
   def findIndonesianLocations():Seq[Document]={
     val cities = Seq(
+      "Padang",
       "Banda Aceh",
       "Medan",
-      "Padang",
       "Pekanbaru",
       "Palembang",
       "Bengkulu",

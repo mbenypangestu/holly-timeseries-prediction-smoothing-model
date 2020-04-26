@@ -12,6 +12,6 @@ import org.mongodb.scala.model.Sorts.{orderBy,ascending}
 object TemporalDataService {
   def findByHotelId(hotel_id : ObjectId): Seq[Document] = {
     val collection : MongoCollection[Document] = db.getCollection("temporal_data")
-    collection.find(equal("hotel.id", hotel_id)).sort(ascending("year", "month")).results()
+    collection.find(equal("hotel._id", hotel_id)).sort(ascending("year", "month")).results()
   }
 }
