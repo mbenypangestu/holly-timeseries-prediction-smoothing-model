@@ -3,6 +3,7 @@ package services
 import org.mongodb.scala.bson.ObjectId
 import org.mongodb.scala.bson.collection.immutable.Document
 import org.mongodb.scala.model.Filters.equal
+import org.mongodb.scala.model.UpdateOptions
 
 import scala.math.pow
 
@@ -23,7 +24,6 @@ object PredictionService {
         result += alpha * pow((1-alpha),t) * d
       }
     }
-
     result
   }
 
@@ -32,7 +32,10 @@ object PredictionService {
     val prediction = collection.find(equal("hotel._id", hotelId)).headResult()
 
     if (prediction != null) {
-      collection.updateOne(equal("_id", prediction("_id").asObjectId().getValue), document).printHeadResult()
+      collection.replaceOne(
+        equal("_id", prediction("_id").asObjectId().getValue),
+        document,
+        new UpdateOptions().upsert(true)).printResults()
     } else {
       collection.insertOne(document).printHeadResult()
     }

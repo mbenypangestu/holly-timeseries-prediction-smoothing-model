@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/media/mygetzu/BENY/MEGA/Project/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/PredictionService.scala:33:62: not found: value restaurantId[0m
-[0m[[0m[31merror[0m] [0m[0m    val prediction = collection.find(equal("restaurant._id", restaurantId)).headResult()[0m
-[0m[[0m[31merror[0m] [0m[0m                                                             ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 2.3); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

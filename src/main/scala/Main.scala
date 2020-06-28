@@ -22,7 +22,7 @@ object Main extends App {
 
       val hotels = findByLocationId(location("_id").asObjectId().getValue)
       hotels.foreach(hotel => {
-//        println("[ " + now + "] "+ hotel("name").asString().getValue)
+        println("[ " + now + "] "+ hotel("location_id").asString().getValue)
         val temporal = findByHotelId(hotel("_id").asObjectId().getValue)
 
         var months = Seq[Int]()
@@ -30,7 +30,7 @@ object Main extends App {
         var rooms = Seq[Double]()
         var values = Seq[Double]()
         var sleep_qualities = Seq[Double]()
-        var locations = Seq[Double]()
+        var locs = Seq[Double]()
         var cleanliness = Seq[Double]()
         var services = Seq[Double]()
         var wordnets = Seq[Double]()
@@ -53,7 +53,7 @@ object Main extends App {
           rooms = rooms :+ room
           values = values :+ value
           sleep_qualities = sleep_qualities :+ sleep_quality
-          locations = locations :+ loc
+          locs = locs :+ loc
           cleanliness = cleanliness :+ clean
           services = services :+ service
           wordnets = wordnets :+ wordnet
@@ -69,16 +69,16 @@ object Main extends App {
               nextYear = years.last
             }
 
-            val roomPrediction = 0.8
-            val valuePrediction = 0.8
-            val sleepQualityPrediction = 0.8
-            val locationPrediction = 0.8
-            val cleanlinessPrediction = 0.8
-            val servicePrediction = 0.8
-            val vaderPrediction = 0.8
-            val wordnetPrediction = 0.8
+            val roomPrediction: Double = getSmoothingPrediction(rooms, 0.8)
+            val valuePrediction: Double = getSmoothingPrediction(values, 0.8)
+            val sleepQualityPrediction: Double = getSmoothingPrediction(sleep_qualities, 0.8)
+            val locationPrediction: Double = getSmoothingPrediction(locs, 0.8)
+            val cleanlinessPrediction: Double = getSmoothingPrediction(cleanliness, 0.8)
+            val servicePrediction: Double = getSmoothingPrediction(services, 0.8)
+            val vaderPrediction: Double = getSmoothingPrediction(vaders, 0.8)
+            val wordnetPrediction: Double = getSmoothingPrediction(wordnets, 0.8)
 
-            val document = Document(
+            val document : Document = Document(
               "location_id" -> location("location_id").asInt32().getValue,
               "location" -> location,
               "hotel_id" -> hotel("location_id").asString().getValue,
@@ -94,8 +94,7 @@ object Main extends App {
               "vader" -> vaderPrediction,
               "wordnet" -> wordnetPrediction
             )
-//            println(document)
-//            savePredictionResult(hotel("_id").asObjectId().getValue, document)
+            savePredictionResult(hotel("_id").asObjectId().getValue, document)
           }
         })
       })
