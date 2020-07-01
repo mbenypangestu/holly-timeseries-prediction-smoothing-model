@@ -11,13 +11,13 @@ import org.mongodb.scala.model.Filters._
 
 object HotelService {
 
-  def findAll(): Seq[Document] ={
-    val collection:MongoCollection[Document] = db.getCollection("hotel")
+  def findAll(): Seq[Document] = {
+    val collection: MongoCollection[Document] = db.getCollection("hotel")
     collection.find().results()
   }
 
-  def findByLocationId(location_id: ObjectId): Seq[Document] ={
-    val collection:MongoCollection[Document] = db.getCollection("hotel")
-    collection.find(equal("location._id", location_id)).results()
+  def findByLocationId(location_id: Int): Seq[Document] = {
+    val collection: MongoCollection[Document] = db.getCollection("hotel")
+    collection.find(equal("location.location_id", location_id)).results()
   }
 }

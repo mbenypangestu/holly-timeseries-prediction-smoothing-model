@@ -1,0 +1,32 @@
+2020.06.30 01:45:16 INFO  started: Metals version 0.9.0 in workspace '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction'
+2020.06.30 01:45:20 INFO  time: initialize in 4.37s
+2020.06.30 01:45:30 INFO  no build target: using presentation compiler with only scala-library
+2020.06.30 01:45:51 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/Main.scala
+2020.06.30 02:08:23 INFO  shutting down Metals
+2020.06.30 13:09:09 INFO  started: Metals version 0.9.0 in workspace '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction'
+2020.06.30 13:09:22 INFO  time: initialize in 13s
+2020.06.30 13:09:29 INFO  skipping build import with status 'Requested'
+2020.06.30 13:10:11 INFO  no build target: using presentation compiler with only scala-library
+2020.06.30 13:10:35 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/Main.scala
+Jun 30, 2020 1:10:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2020.06.30 14:53:22 INFO  shutting down Metals
+2020.06.30 16:18:00 INFO  started: Metals version 0.9.0 in workspace '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction'
+2020.06.30 16:18:03 INFO  time: initialize in 3.38s
+2020.06.30 16:18:10 INFO  skipping build import with status 'Requested'
+2020.06.30 16:18:10 INFO  no build target: using presentation compiler with only scala-library
+2020.06.30 16:18:25 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/Main.scala
+Jun 30, 2020 4:18:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2020.06.30 16:18:25 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/LocationService.scala
+Jun 30, 2020 4:18:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4
+2020.06.30 16:18:58 WARN  code navigation does not work for the file '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/LocationService.scala' because it doesn't belong to a build target.
+2020.06.30 16:19:23 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/LocationService.scala
+2020.06.30 16:19:42 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/LocationService.scala
+2020.06.30 16:19:57 WARN  code navigation does not work for the file '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/Main.scala' because it doesn't belong to a build target.
+2020.06.30 16:19:57 WARN  code navigation does not work for the file '/media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/Main.scala' because it doesn't belong to a build target.
+2020.06.30 16:20:08 WARN  no build target for: /media/mygetzu/BENY/MEGA/DEVELOPMENT/TUGAS_AKHIR/project/holly-production/holly-prediction/src/main/scala/services/TemporalDataService.scala
+Jun 30, 2020 4:20:16 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 137
+2020.06.30 18:04:29 INFO  shutting down Metals
